@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "RoadScanner",
+			"cmd": ["python", "-u", "RoadScanner.py"],
+		}
+	]	
+}

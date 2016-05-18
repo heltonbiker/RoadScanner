@@ -1,0 +1,849 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"attri",
+				"ATTRIBUTE"
+			],
+			[
+				"childn",
+				"childNodes"
+			],
+			[
+				"child",
+				"childNodes"
+			],
+			[
+				"total",
+				"total_seconds"
+			],
+			[
+				"othern",
+				"otherFname"
+			],
+			[
+				"i",
+				"activityId"
+			],
+			[
+				"matches",
+				"matchesSontent"
+			],
+			[
+				"matc",
+				"matchesUrl"
+			],
+			[
+				"chil",
+				"childNode"
+			],
+			[
+				"re",
+				"requestAnimationFrame"
+			],
+			[
+				"Q",
+				"QStandardItem"
+			],
+			[
+				"in",
+				"interestingElements"
+			],
+			[
+				"Docu",
+				"DocumentItem"
+			],
+			[
+				"Abstra",
+				"AbstractObject"
+			],
+			[
+				"ell",
+				"ellipseMode	ellipseMode"
+			],
+			[
+				"iskm",
+				"isKmlNamespace"
+			],
+			[
+				"document",
+				"documentElement"
+			],
+			[
+				"gete",
+				"getElementsByTagName"
+			],
+			[
+				"coords",
+				"coordsSpaced"
+			],
+			[
+				"linestringn",
+				"linestringnode"
+			],
+			[
+				"lines",
+				"linestringNodes"
+			],
+			[
+				"parse",
+				"parseLineStringCoordinates"
+			],
+			[
+				"getElement",
+				"getElementsByTagName"
+			],
+			[
+				"GetEle",
+				"getElementsByTagName"
+			],
+			[
+				"Abs",
+				"AbstractFeatureGroup"
+			],
+			[
+				"_ti",
+				"_tilePixmaps"
+			],
+			[
+				"QNetw",
+				"QNetworkAccessManager"
+			],
+			[
+				"zoom",
+				"ZOOM_STEP"
+			],
+			[
+				"Zoom",
+				"ZOOM_FACTOR"
+			],
+			[
+				"zoomf",
+				"ZOOM_FACTOR"
+			],
+			[
+				"bott",
+				"bottomNormalizedCorner"
+			],
+			[
+				"gett",
+				"getTileIndicesGoogle"
+			],
+			[
+				"GeoPo",
+				"GeoPositionTests"
+			],
+			[
+				"QN",
+				"QNetworkRequest"
+			],
+			[
+				"anch",
+				"anchorY"
+			],
+			[
+				"anchor",
+				"anchorX"
+			],
+			[
+				"TileS",
+				"TILE_SIZE"
+			],
+			[
+				"TILES",
+				"TILE_SIZE"
+			],
+			[
+				"QR",
+				"QRectF"
+			],
+			[
+				"draw",
+				"drawText"
+			],
+			[
+				"tIL",
+				"TILE_SIZE"
+			],
+			[
+				"rect",
+				"sceneRect"
+			],
+			[
+				"Til",
+				"TILE_SIZE"
+			],
+			[
+				"TILE",
+				"TILE_SIZE"
+			],
+			[
+				"TI",
+				"TILE_SIZE"
+			],
+			[
+				"QGra",
+				"QGraphicsPathItem"
+			],
+			[
+				"tiles",
+				"TILE_SIZE"
+			],
+			[
+				"canvas",
+				"canvas_layer"
+			],
+			[
+				"window",
+				"window_frame"
+			],
+			[
+				"Qg",
+				"QtGui"
+			],
+			[
+				"QWindow",
+				"QMainWindow	class"
+			],
+			[
+				"dig",
+				"digitalWrite	Arduino digitalWrite"
+			],
+			[
+				"ala",
+				"analogWrite	Arduino analogWrite"
+			],
+			[
+				"w",
+				"writeByte"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "RoadScanner.py",
+			"settings":
+			{
+				"buffer_size": 555,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "projection.py",
+			"settings":
+			{
+				"buffer_size": 62,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "createMap.py",
+			"settings":
+			{
+				"buffer_size": 1781,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Data/StravaToHtml/DesafioCostaDoce.html",
+			"settings":
+			{
+				"buffer_size": 1685,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					""
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Re-run sketch"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch (Processing 3 only)"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch fullscreen"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Export sketch as application"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Kill running sketches"
+				]
+			],
+			[
+				"Packages/Processing/Build Systems/Processing.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/arduino-cli/arduino-cli.sublime-build",
+					""
+				],
+				[
+					"Packages/arduino-cli/arduino-cli.sublime-build",
+					"just build"
+				],
+				[
+					"Packages/arduino-cli/arduino-cli.sublime-build",
+					"build and upload"
+				]
+			],
+			[
+				"Packages/arduino-cli/arduino-cli.sublime-build",
+				"just build"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 75.0,
+		"last_filter": "insk",
+		"selected_items":
+		[
+			[
+				"insk",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"JsonTree: Show Tree"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"remp",
+				"Package Control: Remove Package"
+			],
+			[
+				"trail",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"removep",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/RoadScannerGit/RoadScanner.sublime-project",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/Google Maps Route Scanning MOVED TO GITHUB/flood_fill.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/Google Maps Route Scanning MOVED TO GITHUB/polylineEncoding.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/GpsDataModel/PositionTests.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/tests.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/.travis.yml",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/SrtmSources.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/widgets/MapScene.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/MapModel.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/MapComplete.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/Google Maps Route Scanning MOVED TO GITHUB/decodePolyline.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/Google Maps Route Scanning MOVED TO GITHUB/ImageFromTiffAndBoundingBox.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/xmledit/XmlEditor.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/testmonitor.sh",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/xmledit/xmledit.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/GpsDataModel/distanceTests.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/README.md",
+		"/home/helton/Dropbox/Ativismo/00 Textos/Análise do Discurso do Temer",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/widgets/MapView.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/widgets/SlippyMap.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/tileServers/SimpleGoogleTileServer.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/tox.ini",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/travis_requirements.txt",
+		"/home/helton/Dropbox/03 Audax/01 Scripts e Programas/01 Gerais/PlotaEvolucaoDaMediaEvento.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/kmlsamples.kml",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/minidom/OpenAndSaveXml.py",
+		"/home/helton/Dropbox/03 Audax/01 Scripts e Programas/01 Gerais/FlyBy/FlyByAtividade.py",
+		"/home/helton/Dropbox/safe/02MinhaMusica/Chalana/Helena Meirelles -04- Chalana.aup",
+		"/home/helton/Dropbox/00 Projetinhos/01 Snippets/bin/trajectories98.py",
+		"/home/helton/Dropbox/03 Audax/01 Scripts e Programas/03 Técnicas/BinaryInAndOut.py",
+		"/home/helton/Dropbox/03 Audax/01 Scripts e Programas/01 Gerais/FlyBy/561048969.json",
+		"/home/helton/Dropbox/03 Audax/01 Scripts e Programas/01 Gerais/FlyBy/matches.json",
+		"/home/helton/Dropbox/03 Audax/01 Scripts e Programas/01 Gerais/FlyBy/561270012.json",
+		"/home/helton/Dropbox/03 Audax/01 Scripts e Programas/01 Gerais/FlyBy/562503255/561803282.json",
+		"/home/helton/Dropbox/03 Audax/01 Scripts e Programas/01 Gerais/FlyBy/561261109.json",
+		"/home/helton/Dropbox/00 Projetinhos/01 Snippets/bin/distance.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/Python Gps Library/GpsLib/DataTypes/Track.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/Python Gps Library/GpsLib/Geo/geofunctions.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/PyGTK Gps Map Application/Models/Path.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/PyGTK Gps Map Application/Models/KML.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/PyGTK Gps Map Application/Models/import_tricks.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/GpsDataModel/Track.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/GpsDataModel/TrackTests.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/ElementTree-lxml/TraverseXmlElementTree.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/minidom/KmlDomConformanceTester.py",
+		"/data/Desktop/MapComplete/MapComplete.py",
+		"/data/Desktop/KML_Samples.kml",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/KmlStructure/KmlStructure.gv",
+		"/data/Desktop/apaga.py",
+		"/home/helton/Downloads/PyQt5_gpl-5.6/README",
+		"/home/helton/Downloads/sip-4.18/README",
+		"/home/helton/Dropbox/Forks do GitHub/fastkml/fastkml/kml.py",
+		"/home/helton/Dropbox/Forks do GitHub/fastkml/examples/UsageExamples.py",
+		"/home/helton/Dropbox/Forks do GitHub/fastkml/examples/KML_Samples.kml",
+		"/data/Desktop/fastkml/fastkml/test_main.py",
+		"/data/Desktop/fastkml/fastkml/base.py",
+		"/data/Desktop/fastkml/examples/ReadKml.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/FeatureDemos/DragableScene.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/FeatureDemos/DragAndDropInTreeView.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/KML.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/sax/KmlSaxParser.py",
+		"/data/Desktop/freehandTool/freehandApp.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/minidom/KmlDomParser.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/minidom/TraverseXmlMinidom.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/KmlFastKml.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/XsdAnalyzer.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/KmlDomParser.py",
+		"/home/helton/Dropbox/Forks do GitHub/fastkml/examples/ReadKmlString.py",
+		"/home/helton/Dropbox/Forks do GitHub/fastkml/examples/CreateKml.py",
+		"/usr/share/subdownloader/gui/main.py",
+		"/home/helton/Dropbox/Forks do GitHub/fastkml/examples/KmlSamplesExample.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/schema.xsd",
+		"/home/helton/Dropbox/Forks do GitHub/fastkml (clone)/requirements.txt",
+		"/home/helton/Dropbox/Forks do GitHub/fastkml (clone)/fastkml/test_main.py",
+		"/home/helton/Dropbox/Forks do GitHub/fastkml (clone)/fastkml/kml.py",
+		"/home/helton/Dropbox/01 Helton Moraes/heltonbiker.github.io/FlappyBird.html",
+		"/home/helton/Dropbox/Forks do GitHub/pykarta/examples/widget_geojson.py",
+		"/home/helton/Dropbox/Forks do GitHub/pykarta/draw/shapes.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/ScatterMédia/PlotaScatterMédias.py",
+		"/usr/share/golly/Patterns/Life/Methuselahs/blom.rle",
+		"/usr/share/golly/Patterns/Life-Like/Day-and-Night-gun-and-antigun.rle",
+		"/usr/share/golly/Patterns/Other-Rules/life-on-the-edge.rle",
+		"/usr/share/golly/Patterns/Life-Like/alt-wicks.py",
+		"/data/Desktop/floppybird/js/main.js",
+		"/data/Desktop/Conway's Game of Life - Javascript_Canvas Implementation.html",
+		"/home/helton/Dropbox/Casa/00 PLANOS DE COMPRA IMOVEL/Links de Imobiliárias.html",
+		"/home/helton/Dropbox/00 Projetinhos/GameFrameworkProcessing/FlappyBirdProcessing/FlappyBirdProcessing.pde",
+		"/data/Desktop/apaga.html",
+		"/home/helton/Dropbox/Forks do GitHub/pyapp/sample_app/sample_app.py",
+		"/home/helton/Dropbox/Forks do GitHub/pykarta/examples/widget_basic.py",
+		"/home/helton/Dropbox/Forks do GitHub/pykarta/examples/geometry_exp.py",
+		"/home/helton/Dropbox/Forks do GitHub/pykarta/examples/widget_custom_layer.py",
+		"/home/helton/Dropbox/Forks do GitHub/pykarta/examples/wms_server.py",
+		"/home/helton/Dropbox/Forks do GitHub/pykarta/examples/widget_vector.py",
+		"/home/helton/Dropbox/Forks do GitHub/pykarta/examples/widget_markers.py",
+		"/home/helton/Dropbox/00 Projetinhos/GameFrameworkProcessing/Game.pde",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/resources/continents.kml",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/GoogleMapsImageOverlayParaBoundingBox/mapa.html",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/GoogleMapsImageOverlayParaBoundingBox/template.html",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/GoogleMapsImageOverlayParaBoundingBox/ImageFromTiffAndBoundingBox.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/TraverseXmlMinidom.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/ogckml22.xsd",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/KmlStructure/render.sh",
+		"/data/Desktop/floppybird/index.html",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/docs/Slippy Map Graphviz Diagram/SlippyMap.gv",
+		"/data/Desktop/standardmodel.py",
+		"/data/Desktop/Adentrando Logradouros em Lomba Grande.kml",
+		"/data/Desktop/apaga.kml",
+		"/data/Desktop/output.kml",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/simpledommodel.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/KmlModel.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/KmlQXmlStreamParser.py",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/KmlDomConformanceTester.py",
+		"/data/Desktop/apagaProcessing/apagaProcessing.pde",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/kml/GraphvizContentFromXsd.py",
+		"/data/Desktop/SimpleKmlPlotter.py",
+		"/home/helton/Dropbox/00 Projetinhos/GameFrameworkProcessing/Orbit.pde",
+		"/home/helton/Dropbox/00 Projetinhos/GameFrameworkProcessing/GameFrameworkProcessing.pde",
+		"/data/Desktop/FlappyBirdProcessing/FlappyBirdProcessing.pde",
+		"/home/helton/Dropbox/Casa/00 PLANOS DE COMPRA IMOVEL/LinksImóvel.txt",
+		"/data/Desktop/Conway's Game of Life - Javascript_Canvas Implementation_files/game-of-life-v3.1.1.js",
+		"/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Python/MapComplete/FeatureDemos/XmlToTreeView.py",
+		"/data/Desktop/PyQt4/examples/itemviews/editabletreemodel/ui_mainwindow.py",
+		"/data/Desktop/PyQt4/examples/itemviews/chart/chart.py",
+		"/data/Desktop/PyQt4/examples/itemviews/simpletreemodel/simpletreemodel.py",
+		"/data/Desktop/PyQt4/examples/itemviews/customsortfiltermodel.py",
+		"/data/Desktop/PyQt4/examples/itemviews/dirview.py",
+		"/data/Desktop/PyQt4/examples/itemviews/fetchmore.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ll2str",
+			"connect",
+			"activiti",
+			"Activities",
+			"Map",
+			"Stream",
+			"Backend",
+			"toString",
+			">>> ",
+			"printChildFeatures",
+			"FeaturesRecursively",
+			"RecursiveFeatures",
+			"NetworkLink",
+			"AbstractObject",
+			"AbstractGeometryGroup",
+			"child",
+			"keyW",
+			"keyA",
+			"keyS",
+			"keyD",
+			"id",
+			"updatePipes",
+			"loopPipeloop",
+			"DocumentModel",
+			"parentNode",
+			"bar",
+			"window",
+			"kmlModel",
+			"leftPanel",
+			"\\n",
+			"StyleSelector",
+			"styleSelector",
+			"Style",
+			"AbstractFeatureGroup",
+			"AbstractFeatureType",
+			"AbstractGeometrySimpleExtension",
+			"AbstractGeometryType",
+			"AbstractObject",
+			"AbstractFeature",
+			"Type",
+			"raio",
+			"8",
+			"item",
+			"folder",
+			"coordsString",
+			"coordNode",
+			"coordinates",
+			"ls",
+			"tup",
+			"lst",
+			"000000000",
+			"decPat",
+			"decimal",
+			"99999999",
+			"00000001",
+			"layer_cachoeiras",
+			", ",
+			"Group",
+			"radius",
+			"2**self.zoomLevel",
+			"2**zoomLevel",
+			"zoomLevelValue",
+			"tilesize",
+			"GeoPosition",
+			"handleNetworkData",
+			"updated",
+			"_emptyTile",
+			"second",
+			"first",
+			"_url",
+			"_manager",
+			"widget",
+			",0 ",
+			"drawContinents",
+			"TDIM",
+			"ServerUrl",
+			"Service",
+			"GDAL_WMS",
+			"MyApp",
+			"_url",
+			"_manager"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\l",
+			"",
+			", \\n",
+			",0\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "RoadScanner.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 555,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								365,
+								365
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "projection.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 62,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								62,
+								62
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "createMap.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								117,
+								117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/helton/Dropbox/00 Projetinhos/00 Cartografia/00 Tentativas do Aplicativo Definitivo/Data/StravaToHtml/DesafioCostaDoce.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1028,
+								1028
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 274.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "RoadScanner.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 177.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
