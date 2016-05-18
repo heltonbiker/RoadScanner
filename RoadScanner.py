@@ -6,6 +6,9 @@ import webbrowser
 from projection import project
 from directions import *
 
+def getSegments(road):
+    return [(road[n-1], road[n]) for n in xrange(1, len(road))]
+
 def scanRoads(origin, radius):
     result = []
 
@@ -15,6 +18,8 @@ def scanRoads(origin, radius):
     for direction in dirs:
         destination = project(origin, direction, radius)
         road = getDirections(origin, destination)
+        #segments = getSegments(road)
+
         result.append(road)
 
     return result
@@ -28,16 +33,15 @@ if __name__ == '__main__':
 
     roads = scanRoads(origin, radius)
 
-    import matplotlib.pyplot as plt
-    for road in roads:
-        lats, lons = zip(*road)
-        plt.plot(lons, lats)
-
-    plt.axis('equal')
-    plt.grid()
-    plt.show()
-    exit()
-
     from createMap import createMap
     createMap(roads, "map.html")
     webbrowser.open("map.html")
+
+    # import matplotlib.pyplot as plt
+    # for road in roads:
+    #     lats, lons = zip(*road)
+    #     #print lats, lons
+    #     plt.plot(lons, lats, 'o-', ms=3, mew=0)
+
+    # plt.grid()
+    # plt.show()    

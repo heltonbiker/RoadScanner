@@ -17,28 +17,35 @@ template = """<!DOCTYPE html>
         
     <script type="text/javascript">
 
-        function initialize () {
-            
-            var mapOptions = {
-                center: new google.maps.LatLng(-30.212202,-51.362572),
-                zoom: 11,
-                mapTypeId: google.maps.MapTypeId.TERRAIN
-            };
-            var map = new google.maps.Map(document.getElementById("map_canvas"),
-                mapOptions);
+        var bounds = new google.maps.LatLngBounds();
 
-            latlng = $$$$
-
+        function addRoad(road, map) {
             var coordinates = [];
-            var bounds = new google.maps.LatLngBounds();
-            for (var i = 0; i < latlng.length; i++) {
-                var ll = latlng[i];
-                gll = new google.maps.LatLng(ll[0], ll[1])
+            for (var i = 0; i < road.length; i++) {
+                var ll = road[i];
+                gll = new google.maps.LatLng(ll[1], ll[0])
                 coordinates.push(gll);
                 bounds.extend(gll)
             }            
             var percurso = new google.maps.Polyline({path: coordinates, strokeColor: "red"});
             percurso.setMap(map);
+        }
+
+        function initialize () {
+            
+            var mapOptions = {
+                center: new google.maps.LatLng(-30.212202,-51.362572),
+                zoom: 11,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"),
+                mapOptions);
+            
+            roads = $$$$
+            
+            for (var i = 0; i < roads.length; i++) {
+                addRoad(roads[i], map);
+            }
 
             map.fitBounds(bounds);
         }

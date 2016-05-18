@@ -62,7 +62,7 @@ def decodePolyline(point_str):
         prev_y += coords[i]
         # a round to 6 digits ensures that the floats are the same as when
         # they were encoded
-        points.append((round(prev_x, 6), round(prev_y, 6)))
+        points.append([round(prev_x, 6), round(prev_y, 6)])
 
     return points
 
