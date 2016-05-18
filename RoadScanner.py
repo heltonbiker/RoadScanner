@@ -4,6 +4,7 @@
 import webbrowser
 
 from projection import project
+from directions import *
 
 def scanRoads(origin, radius):
     result = []
@@ -12,10 +13,10 @@ def scanRoads(origin, radius):
     step = 360.0/angleSteps
     dirs = [n * step for n in xrange(angleSteps)]
     for direction in dirs:
-        newPoint = project(origin, direction, radius)
-        result.append([origin, newPoint])
+        destination = project(origin, direction, radius)
+        road = getDirections(origin, destination)
+        result.append(road)
 
-    print result
     return result
 
 
@@ -25,11 +26,11 @@ if __name__ == '__main__':
     origin = (-30.2664935,-51.8364501)
     radius = 10
 
-    paths = scanRoads(origin, radius)
+    roads = scanRoads(origin, radius)
 
     import matplotlib.pyplot as plt
-    for path in paths:
-        lats, lons = zip(*path)
+    for road in roads:
+        lats, lons = zip(*road)
         plt.plot(lons, lats)
 
     plt.axis('equal')
@@ -38,5 +39,5 @@ if __name__ == '__main__':
     exit()
 
     from createMap import createMap
-    createMap(paths, "map.html")
+    createMap(roads, "map.html")
     webbrowser.open("map.html")
