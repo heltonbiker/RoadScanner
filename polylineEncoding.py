@@ -1,28 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-def decodePolyline(point_str):
-    '''Decodes a polyline that has been encoded using Google's algorithm
-    http://code.google.com/apis/maps/documentation/polylinealgorithm.html
+def decodePolylineInteger(point_str):
 
-    This is a generic method that returns a list of (latitude, longitude)
-    tuples.
-
-    :param point_str: Encoded polyline string.
-    :type point_str: string
-    :returns: List of 2-tuples where each tuple is (latitude, longitude)
-    :rtype: list
-
-    '''
-
-    # sone coordinate offset is represented by 4 to 5 binary chunks
     coord_chunks = [[]]
-    for char in point_str:
 
-        # convert each character to decimal from ascii
+    for char in point_str:
         value = ord(char) - 63
 
-        # values that have a chunk following have an extra 1 on the left
         split_after = not (value & 0x20)
         value &= 0x1F
 
@@ -41,16 +26,12 @@ def decodePolyline(point_str):
         for i, chunk in enumerate(coord_chunk):
             coord |= chunk << (i * 5)
 
-        #there is a 1 on the right if the coord is negative
         if coord & 0x1:
-            coord = ~coord #invert
+            coord = ~coord
         coord >>= 1
-        coord /= 100000.0
 
         coords.append(coord)
 
-    # convert the 1 dimensional list to a 2 dimensional list and offsets to
-    # actual values
     points = []
     prev_x = 0
     prev_y = 0
@@ -60,14 +41,15 @@ def decodePolyline(point_str):
 
         prev_x += coords[i + 1]
         prev_y += coords[i]
-        # a round to 6 digits ensures that the floats are the same as when
-        # they were encoded
-        points.append([round(prev_x, 6), round(prev_y, 6)])
 
+        x = prev_x
+        y = prev_y
+
+        point = (y, x)
+        
+        points.append(point)
     return points
 
 
-def encodePolyline(points):
-    result = ""
-
-    return result
+if __name__ == '__main__':
+    print decodePolyline('_p~iF~ps|U_ulLnnqC_mqNvxq`@')

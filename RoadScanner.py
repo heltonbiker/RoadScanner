@@ -2,46 +2,78 @@
 # coding: utf-8
 
 import webbrowser
+import matplotlib.pyplot as plt
+import time
+from collections import deque
 
 from projection import project
 from directions import *
 
-def getSegments(road):
-    return [(road[n-1], road[n]) for n in xrange(1, len(road))]
 
-def scanRoads(origin, radius):
-    result = []
+plt.ion()
 
-    angleSteps = 8
-    step = 360.0/angleSteps
-    dirs = [n * step for n in xrange(angleSteps)]
-    for direction in dirs:
-        destination = project(origin, direction, radius)
-        road = getDirections(origin, destination)
-        #segments = getSegments(road)
-
-        result.append(road)
-
-    return result
+def location(endNode):
+    f = 0.00001
+    return (endNode[0] * f, endNode[1] * f)    
 
 
+def run():
+    start = (-3128042,-5220888)
+    radius = 1
+
+    fig = plt.figure()
+
+    REQUEST_LIMIT = 25
+
+    requests = 0
+
+    # dirs = [n * 360.0/angleSteps for n in xrange(8)]
+
+    nodeSet = set()
+    seeds = deque()
+
+    seeds.append(start)
+
+    while (seeds):
+        origin = location(seeds.popleft())
+        print origin
+        for direction in xrange(0, 360, 30):            
+            destination = project(origin, direction, radius)
+            
+            road = getDirections(origin, destination)
+
+            if not road:
+                continue
+
+            endNode = road[-1]
+
+            if not endNode in nodeSet:
+                seeds.append(endNode)
+                fig.gca().plot(endNode[1], endNode[0], 'o')
+
+            for node in road[:-1]:
+                nodeSet.add(node)
+                if node in seeds:
+                    seeds.remove(node)
+
+            fig.clf()
+            fig.gca().axis('equal')
+
+            lats, lons = zip(*list(nodeSet))
+            fig.gca().scatter(lons, lats, s=4, linewidths=0, color='k', alpha=0.3)
+            
+            slat, slon = zip(*seeds)
+            fig.gca().scatter(slon, slat, color='r', s=30, linewidths=0)
+
+            fig.canvas.draw()
+
+            requests += 1
+            # if requests > REQUEST_LIMIT:
+            #     return
+
+            time.sleep(0.3)
+
+run()
 
 
-if __name__ == '__main__':
-    origin = (-30.2664935,-51.8364501)
-    radius = 10
-
-    roads = scanRoads(origin, radius)
-
-    from createMap import createMap
-    createMap(roads, "map.html")
-    webbrowser.open("map.html")
-
-    # import matplotlib.pyplot as plt
-    # for road in roads:
-    #     lats, lons = zip(*road)
-    #     #print lats, lons
-    #     plt.plot(lons, lats, 'o-', ms=3, mew=0)
-
-    # plt.grid()
-    # plt.show()    
+plt.show(block=True)
