@@ -13,7 +13,6 @@ from directions import *
 # TODO:
 # Load seeds from file at start, and serialize them back periodically
 
-
 class NodeSet(object):
     def __init__(self, fname):
 
@@ -62,8 +61,8 @@ def run():
 
         origin = location(seeds.popleft())
 
-        for direction in xrange(0, 360, 30):      
-
+        for direction in xrange(0, 360, 30):     
+         
             destination = project(origin, direction, radius)
             
             road = getDirections(origin, destination)
