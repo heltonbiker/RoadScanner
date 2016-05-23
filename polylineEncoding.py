@@ -52,4 +52,4 @@ def decodePolylineInteger(point_str):
 
 
 if __name__ == '__main__':
-    print decodePolyline('_p~iF~ps|U_ulLnnqC_mqNvxq`@')
+    print decodePolylineInteger('_p~iF~ps|U_ulLnnqC_mqNvxq`@')

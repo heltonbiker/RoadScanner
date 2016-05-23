@@ -1,16 +1,38 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import webbrowser
 import matplotlib.pyplot as plt
 import time
+import os
 from collections import deque
 
 from projection import project
 from directions import *
 
 
-plt.ion()
+# TODO:
+# Load seeds from file at start, and serialize them back periodically
+
+
+class NodeSet(object):
+    def __init__(self, fname):
+
+        self._fname = fname
+        self._nodes = set()
+
+        if (not os.path.exists(nodesfname)):
+            with open(nodesfname, 'w'):
+                pass
+        else:
+            try:
+                with open(self._fname) as nodesfile:
+                    self._nodes.update(map(int, l.split(';')) for l in nodesfile)
+
+    def addNode(self, node):
+        self._nodes.add(node)
+        with open(self._fname, 'a') as nodesfile:
+            nodesfile.writeline("{};{}".format(node))
+
 
 def location(endNode):
     f = 0.00001
@@ -18,26 +40,30 @@ def location(endNode):
 
 
 def run():
-    start = (-3128042,-5220888)
     radius = 1
 
+    plt.ion()
     fig = plt.figure()
 
     REQUEST_LIMIT = 25
 
     requests = 0
 
-    # dirs = [n * 360.0/angleSteps for n in xrange(8)]
+    nodeSet = NodeSet('nodes.txt')
+    start = (-3128042,-5220888)
+    nodeSet.addNode(start)
 
-    nodeSet = set()
+
     seeds = deque()
 
     seeds.append(start)
 
     while (seeds):
+
         origin = location(seeds.popleft())
-        print origin
-        for direction in xrange(0, 360, 30):            
+
+        for direction in xrange(0, 360, 30):      
+
             destination = project(origin, direction, radius)
             
             road = getDirections(origin, destination)
@@ -52,7 +78,7 @@ def run():
                 fig.gca().plot(endNode[1], endNode[0], 'o')
 
             for node in road[:-1]:
-                nodeSet.add(node)
+                nodeSet.addNode(node)
                 if node in seeds:
                     seeds.remove(node)
 
