@@ -57,6 +57,7 @@
         
         function doConnect() {
             websocket = new WebSocket("ws://localhost:8000/");
+            websocket.binaryType = 'arraybuffer';
             websocket.onopen = function(event) { onOpen(event) };
             websocket.onclose = function(event) { onClose(event) };
             websocket.onmessage = function(event) { onMessage(event) };
@@ -77,7 +78,9 @@
         }
 
         function onMessage(event) {
-            console.log(event.data);
+            var a = new Float64Array(event.data);
+            //console.log(res);
+            addFloatArrayAsPolylineToMap(a);
         }
 
         function onError(event) {
@@ -229,6 +232,27 @@
             });
 
             polyline.setMap(map);            
+        }
+
+        function addFloatArrayAsPolylineToMap(array) {            
+            var latlngs = []
+            
+            var len = array.length;
+            for (var i = 0; i < len; i += 2) {
+                var lon = array[i];
+                var lat = array[i + 1];
+                latlngs.push({lat:lat, lng:lon})
+            };
+
+            var polyline = new google.maps.Polyline({
+                path: latlngs,
+                geodesic: true,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.5,
+                strokeWeight: 2
+            });
+
+            polyline.setMap(map);              
         }
 
         function lineString(coordinates)     
