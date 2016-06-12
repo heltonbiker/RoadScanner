@@ -35,7 +35,6 @@ class RoadsSocket(WebSocket):
             lines = roadsfile.readlines()
             for line in lines:
                 numbers = map(float, re.split('[\s,]+', line.strip()))
-                print numbers
                 a = array('d', numbers)       
                 self.sendMessage(a.tostring())
 
@@ -45,19 +44,20 @@ class RoadsSocket(WebSocket):
         # clients.append(self)        
 
     def handleMessage(self):
-        print "message"
-        print dir(self)
-        print self.client
-        print self.data
+        # print "message"
+        # print dir(self)
+        # print self.client
+        # print self.data
 
-        # if not os.path.exists(self._fname):
-        #     print "gonna save the file"
-        #     with open(self._fname, 'w'):
-        #         pass  
+        if not os.path.exists(self._fname):
+            print "gonna save the file"
+            with open(self._fname, 'w'):
+                pass  
                 
-        # with open(self._fname, 'a') as out:
-        #     out.write(self.data)
-        #     out.write("\n")
+        with open(self._fname, 'a') as out:
+            print "writing road to file"
+            out.write(self.data)
+            out.write("\n")
 
       # for client in clients:
       #    if client != self:
@@ -65,7 +65,6 @@ class RoadsSocket(WebSocket):
 
     def handleClose(self):
         print "close"
-        print dir(self)
 
 
 if __name__ == "__main__":

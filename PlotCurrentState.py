@@ -1,54 +1,77 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import matplotlib.pyplot as plt
+import json
+import glob
 
-with open('nodes.txt') as nodesfile:
-    nodes = [(map(int, l.split(';'))) for l in nodesfile]
-    nodesdict = {node[0] : (node[1], node[2]) for node in nodes}
+lastfile = sorted(glob.glob('output/*.json'))[-1]
+with open(lastfile) as jsonfile:
+    jsondict = json.load(jsonfile)
 
-with open('seeds.txt') as seedsfile:
-    seeds = [(map(int, l.split(';'))) for l in seedsfile]
+nodes = [tuple(node['id']) for node in jsondict['nodes']]
+edges = [(nodes[edge['source']], nodes[edge['target']]) for edge in jsondict['links']]
 
-with open('edges.txt') as edgesfile:
-    edges = [map(lambda x: nodesdict[int(x)], line.split(';')) for line in edgesfile]
+edgeDict = {}
 
 for edge in edges:
-    lats, lons = zip(*edge)
-    plt.plot(lons, lats, 'k')
+    src, dst = edge
+    for key, val in [(src, dst), (dst, src)] :
+        if key in edgeDict:
+            edgeDict[key].append(val)
+        else:
+            edgeDict[key] = ([val])
 
 
+# Identify endpoint nodes: order other than 2
+endpoint = []
+for src, dst in edgeDict.iteritems():
+    if len(dst) != 2:
+        endpoint.append(src)
+
+roads = []    # List of roads, each a list of nodes
+
+# Build roads between the identified endpoints
+# Pick the first endpoint in the remaining list.
+# Move to the first-listed adjacent node.
+# Keep going until we hit another node on the endpoint list.
+while len(endpoint) > 0:
+    here = endpoint[0]
+
+    # Pick a first step and consume the edge
+    next = edgeDict[here].pop(0)
+    edgeDict[next].remove(here)
+    road = [here, next]
+
+    # If that's the last connection to the node, remove that node from the endpoints list.
+    if len(edgeDict[here]) == 0:
+        del endpoint[0]
+        del edgeDict[here]
+
+    # Special case for a one-segment road; endpoint entry of "next" is removed after the loop
+    if next != here and len(edgeDict[next]) == 0:
+        del edgeDict[next]
+
+    # Consume edges until we reach another endpoint.
+    while next not in endpoint:
+        here = next
+        next = edgeDict[here].pop(0)
+        edgeDict[next].remove(here)
+        road.append(next)
+        if len(edgeDict[next]) == 0:
+            del edgeDict[next]
+
+    if next not in edgeDict:
+        endpoint.remove(next)
+
+    roads.append(road)
 
 
-# # try to erase centers:
-# from EnclosingCircle import make_circle
-# from math import *
+import matplotlib.pyplot as plt
 
-# def distance(p1, p2):
-#     return hypot(p2[0] - p1[0], p2[1] - p1[1])
+for road in roads:
+    lons, lats = zip(*road)
+    plt.plot(lons, lats)
 
-# clat, clon, radius = make_circle(seeds)
-
-# plt.plot(clon, clat, 'o')
-
-# seeds2 = []
-
-# for seed in seeds:
-#     d = distance(seed, (clat, clon))
-#     print d
-#     if d > radius*0.5:
-#         seeds2.append(seed)
-
-# slat2, slon2 = zip(*seeds2)
-# plt.scatter(slon2, slat2, color='g', s=40, linewidths=0, alpha=1)
-
-
-# lats, lons = zip(*nodes)
-# plt.scatter(lons, lats, color='b', s=5, linewidths=0, alpha=0.05)
-
-slat, slon = zip(*seeds)
-plt.scatter(slon, slat, color='r', s=20, linewidths=0, alpha=1)
-
-plt.axis('equal')
 plt.grid()
+plt.axis('equal')
 plt.show()

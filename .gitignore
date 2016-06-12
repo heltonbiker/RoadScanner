@@ -2,3 +2,5 @@
 *.html
 *.sublime*
 *.txt
+output/*
+*.json

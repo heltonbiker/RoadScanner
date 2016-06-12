@@ -37,7 +37,7 @@
             background: SkyBlue;
             top: 0px;
             bottom: 0px;
-            left: 200px;
+            left: 0px;
             right:0px;
         }
 
@@ -50,8 +50,6 @@
     </style>
 
     <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
-
-    <script src="polyline.js"></script>
 
     <script>
         
@@ -78,9 +76,9 @@
         }
 
         function onMessage(event) {
-            var a = new Float64Array(event.data);
+            var a = new Int32Array(event.data);
             //console.log(res);
-            addFloatArrayAsPolylineToMap(a);
+            addArrayAsPolylineToMap(a);
         }
 
         function onError(event) {
@@ -192,35 +190,102 @@
             var route = dRenderer.getDirections().routes[0];
             var legs = route.legs
 
+            console.log("legs " + legs.length)
+
             for (var i = 0; i < legs.length; i++)
             {
                 var leg = legs[i];
                 var steps = leg.steps;
 
-                for (var j = 0; j < steps.length; j++)
+                console.log("steps " + steps.length)
+
+                var startIndex = i == 0 ? 0 : 1
+
+                for (var j = startIndex; j < steps.length; j++)
                 {
                     var step = steps[j];
                     var points = step.polyline.points
 
-                    coordinates.push.apply(coordinates, (decode(points)));
+                    var decodedCoords = decodePolyline(points);
+
+                    if (j > 0) {
+                        decodedCoords.shift();
+                    }
+
+                    coordinates.push.apply(coordinates, decodedCoords);
                 }
             }
+
+            // need to remove endpoints and duplicated consecutive points
+            coordinates = coordinates
+                .filter(function(item, pos, arr){
+                    return pos === 0 || item !== arr[pos-1]
+                })
+                .slice(1, coordinates.length -1);
 
             addPolylineToMap(coordinates);
 
             var message = lineString(coordinates);
+
+            console.log(message);
 
             //alert(message);
 
             Send(message);
         }
 
+
+        function decodePolyline(str) {
+            var index = 0,
+            lat = 0,
+            lng = 0,
+            coordinates = [],
+            shift = 0,
+            result = 0,
+            byte = null,
+            latitude_change,
+            longitude_change
+
+            while (index < str.length) {
+
+                byte = null;
+                shift = 0;
+                result = 0;
+
+                do {
+                    byte = str.charCodeAt(index++) - 63;
+                    result |= (byte & 0x1f) << shift;
+                    shift += 5;
+                } while (byte >= 0x20);
+
+                latitude_change = ((result & 1) ? ~(result >> 1) : (result >> 1));
+
+                shift = result = 0;
+
+                do {
+                    byte = str.charCodeAt(index++) - 63;
+                    result |= (byte & 0x1f) << shift;
+                    shift += 5;
+                } while (byte >= 0x20);
+
+                longitude_change = ((result & 1) ? ~(result >> 1) : (result >> 1));
+
+                lat += latitude_change;
+                lng += longitude_change;
+
+                coordinates.push([lat, lng]);
+            }
+
+            return coordinates;
+        }; 
+
+
         function addPolylineToMap(coordinates) {
 
             var latlngs = [];
             for (var i = 0; i < coordinates.length; i++) {
                 var c = coordinates[i];
-                latlngs.push({lat: c[0], lng: c[1]})
+                latlngs.push({lat: c[0]*1e-5, lng: c[1]*1e-5})
             }
 
             var polyline = new google.maps.Polyline({
@@ -234,14 +299,14 @@
             polyline.setMap(map);            
         }
 
-        function addFloatArrayAsPolylineToMap(array) {            
+        function addArrayAsPolylineToMap(array) { 
             var latlngs = []
             
             var len = array.length;
             for (var i = 0; i < len; i += 2) {
                 var lon = array[i];
                 var lat = array[i + 1];
-                latlngs.push({lat:lat, lng:lon})
+                latlngs.push({lat:lat*1e-5, lng:lon*1e-5})
             };
 
             var polyline = new google.maps.Polyline({
@@ -272,12 +337,13 @@
 </head>
 
 <body>
+<!--
     <div id="left" class="container">
         <form title="Controles">
 
         </form>
     </div>
-
+-->
     <div id="main" class="container">
         <div id="map-canvas"></div>
     </div>
