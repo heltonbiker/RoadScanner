@@ -13,6 +13,7 @@ import json
 import time
 import glob
 import itertools
+import webbrowser
 
 import networkx as nx
 from networkx.readwrite import json_graph
@@ -163,5 +164,7 @@ if __name__ == "__main__":
         sys.exit()
 
     signal.signal(signal.SIGINT, close_sig_handler)
+
+    # webbrowser.open_new('RoadScanner.html')
 
     server.serveforever()

@@ -49,7 +49,7 @@
 
     </style>
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBiak0v2-i3vJc1lcrkGQDqooYHFJBjAWI"></script>
 
     <script>
         
@@ -76,9 +76,9 @@
         }
 
         function onMessage(event) {
-            var a = new Int32Array(event.data);
+            var roadArray = new Int32Array(event.data);
             //console.log(res);
-            addArrayAsPolylineToMap(a);
+            addRoadToMap(roadArray);
         }
 
         function onError(event) {
@@ -113,6 +113,21 @@
             };
             map = new google.maps.Map(document.getElementById('map-canvas'), 
                 mapOptions);
+
+
+            /*
+            var layer_relevo = new google.maps.GroundOverlay(
+                'overlay.jpg',
+                new google.maps.LatLngBounds(
+                    new google.maps.LatLng(-31.7534721,-52.9564534),
+                    new google.maps.LatLng(-30.0481394,-51.3321098)),
+                {
+                    clickable: false,
+                    opacity: 0.4,
+            });
+
+            layer_relevo.setMap(map);
+            */
 
 
             // Service
@@ -299,7 +314,7 @@
             polyline.setMap(map);            
         }
 
-        function addArrayAsPolylineToMap(array) { 
+        function addRoadToMap(array) { 
             var latlngs = []
             
             var len = array.length;
@@ -312,12 +327,33 @@
             var polyline = new google.maps.Polyline({
                 path: latlngs,
                 geodesic: true,
-                strokeColor: '#FF0000',
-                strokeOpacity: 0.5,
+                strokeColor: '#FF8800',
                 strokeWeight: 2
             });
 
             polyline.setMap(map);              
+
+            /* 
+            var icon = {
+                path: google.maps.SymbolPath.CIRCLE,
+                strokeColor: "#0088FF",
+                strokeWeight: 1,
+                scale: 2
+            };
+
+            var start = new google.maps.Marker({
+                position: latlngs[0],
+                icon: icon,
+                map: map
+            });
+
+            var end = new google.maps.Marker({
+                position: latlngs[latlngs.length-1],
+                icon: icon,
+                map: map
+            });
+            */
+
         }
 
         function lineString(coordinates)     
